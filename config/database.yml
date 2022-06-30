@@ -1,0 +1,30 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: pocket_smith_development
+
+  username: pocket_smith
+
+  password: root
+
+  #host: localhost
+
+  #port: 5432
+
+test:
+  <<: *default
+  database: pocket_smith_development
+  username: pocket_smith
+  host: localhost
+
+production:
+  <<: *default
+  database: pocket_smith_production
+  username: pocket_smith
+  password: <%= ENV["POCKET_SMITH_DATABASE_PASSWORD"] %>

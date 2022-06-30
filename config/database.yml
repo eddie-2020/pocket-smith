@@ -22,6 +22,7 @@ test:
   database: pocket_smith_development
   username: pocket_smith
   host: localhost
+  password: root
 
 production:
   <<: *default

@@ -1,0 +1,31 @@
+<div>
+    <h1> All Groups </h1>
+<div>
+
+<div class="container">
+<% if @groups.empty? %>
+    <div class="">
+    <h3 class="">No groups yet.</h3>
+    </div>
+<% else %>
+    <% @groups.each do |group| %>
+        <div class="">
+        <img src=<%= group.icon %> alt=<%= group.name %> class="">
+        <div class="">
+            <div class="">
+                <h3>
+                    <%= link_to group.name, group_operations_path(group_id: group.id) %>
+                </h3>
+                <p>$<%= group_amount(group) %></p>
+            </div>
+            <small>
+                <%= group.created_at.strftime("%d %b %Y") %>
+            </small>
+        </div>
+        </div>
+    <% end %>
+<% end %>
+    <div class="margin">
+        <%= link_to "Add group", new_group_path, class: "" %>
+    </div>
+</div>

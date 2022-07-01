@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :user do
-    name { 'Edward Oluyara' }
-    email { 'edward@gmail.com' }
-    password { 'root123' }
-    password_confirmation { 'root123' }
+    name { 'Pedro Guerreiro' }
+    email { 'pedro@mail.com' }
+    password { '123456' }
+    password_confirmation { '123456' }
 
     trait :confirmed do
       confirmed_at { Time.zone.now }

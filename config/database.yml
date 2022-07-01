@@ -13,10 +13,6 @@ development:
 
   password: root
 
-  #host: localhost
-
-  #port: 5432
-
 test:
   <<: *default
   database: pocket_smith_development

@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Blaka&family=Lobster&family=Poppins:wght@200&family=Roboto:wght@300;700&family=Signika+Negative&display=swap');
+
+:root {
+  --light-background: #efefef;
+  --font: 'Signika Negative', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--light-background);
+}
+
+li {
+  list-style-type: none;
+}
+
+.price {
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .link {
+    margin-right: 100px;
+  }
+
+  a {
+    font-size: 18px;
+    width: 100%;
+  }
+}

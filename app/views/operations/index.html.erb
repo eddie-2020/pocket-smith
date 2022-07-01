@@ -1,0 +1,29 @@
+<div>
+    <h1 class="">
+        <%= link_to groups_path do %>
+            <i class="bi bi-arrow-left"></i>
+        <% end %>
+    </h1>
+    <h1 class="">Operations for <%= @group.name %></h1>
+</div>
+
+<div>
+    <div class="">
+        <p  class="">Money spent: $<%= group_amount(@group) %></p>
+    </div>
+    <% if @operations.empty? %>
+        <div class="">
+            <h3 class="">No operations yet.</h3>
+        </div>
+    <% else %>
+        <% @operations.each do |operation| %>
+            <div class="">
+                <h3><%= operation.name %></h3>
+                <p>$<%= operation.amount %></p>
+            </div>
+        <% end %>
+    <% end %>
+    <div>
+        <%= link_to "Add operation", new_operation_path, class: "" %>
+    </div>
+</div>

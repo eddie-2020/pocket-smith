@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   before :example do
     @user = FactoryBot.create(:user, :confirmed)
-    @group = Group.create(name: 'Group 1', icon: 'www.a_link_for_an_icon.png', author_id: @user.id)
+    @group = Group.create(name: 'Personal',
+                          icon: 'https://www.flaticon.com/premium-icon/students_2995620?term=student&page=1&position=2&page=1&position=2&related_id=2995620&origin=search',
+                          author_id: @user.id)
   end
 
   it 'should be valid with valid attributes' do

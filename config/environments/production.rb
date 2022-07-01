@@ -78,7 +78,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { host: 'https://fast-budget-rails.herokuapp.com/', port: 443 }
+  config.action_mailer.default_url_options = { host: 'https://pocket-smith.herokuapp.com/', port: 443 }
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"

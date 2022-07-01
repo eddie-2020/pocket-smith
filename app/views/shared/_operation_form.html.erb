@@ -2,7 +2,7 @@
     <%= form_with model: @operation, data: { turbo: false }, class: "" do |form| %>
 
     <div class="form-group">
-        <%= form.label :name, class: "form-label" %>
+        <%= form.label :name, class: "form-label fs-4" %>
         <%= form.text_field :name, autofocus: true, class: "form-control", required: true %>
     </div>
 
@@ -16,6 +16,7 @@
         <%= select("group", "group_id", Group.all.collect { |g| [ g.name, g.id ] }, { include_blank: false }, multiple: true, size: 3, class: "form-control", required: true) %>
     </div>
 
-    <%= form.submit "Save", class: "" %>
+    <%= form.submit "Save", class: "btn align-self-start margin-y" %>
+
     <% end %>
 </div>

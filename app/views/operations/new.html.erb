@@ -1,12 +1,12 @@
-<div>
-    <h1 class="">
-        <%= link_to :back do %>
-            <i class="bi bi-arrow-left"></i>
-        <% end %>
+<header class="bg-info p-2">
+  <h1 class="position-absolute">
+    <%= link_to :back do %>
+      <i class="bi bi-arrow-left"></i>
+    <% end %>
     </h1>
-    <h1 class="">Create Operation</h1>
-</div>
+  <h1 class="text-center margin-y">Create Operation</h1>
+</header>
 
-<div>
-    <%= render "shared/operation_form" %>
+<div class="container">
+  <%= render "shared/operation_form" %>
 </div>

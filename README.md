@@ -4,8 +4,6 @@ This is a mobile web application where you can manage your budget whereby you ha
 ## Live Demo
 [Pocket Smith](https://pocket-smith.herokuapp.com/)
 
-[Pocket Smith](https://pocket-smith.herokuapp.com/)
-
 ### Live Presentation
 [Pocket Smith App video](https://www.loom.com/share/911d132b31c64383b8fcd39512b839b5)
 

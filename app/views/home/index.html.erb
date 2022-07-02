@@ -1,33 +1,14 @@
 <header class="">
-  <h1 class="bg-primary text-light text-center p-2"><i class="bi bi-wallet-fill"></i> Pocket Smith </h1>
+  <h1 class="dark text-center splash-title"> Pocket Smith </h1>
 </header>
-<section class="container mt-5 border border-1 shadow-sm p-4">
-  <div class="">
-    <h2 class="fs-4 fw-bolder text-secondary text-center">How it works</h2>
-    <p class="text-center">
-      Easily manage your budget. Have a list of transactions associated with a category, so that you can see how much money you spent and on what.
-    </p>
-  </div>
+<section class="container splash">
+  <div class="text-center fixed-bottom">
+    <span>
+      <%= link_to "LOG IN", new_user_session_path, class: "d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 mb-2 btn btn-primary" %>
+    </span>
 
-  <div class="text-center">
-    <h2 class="fs-4 fw-bolder text-secondary mt-5">Join now</h2>
-    <div class="d-flex justify-content-evenly align-items-center">
-      <div>
-        <p>
-          Dont have an account?
-        </p>
-        <span>
-          <%= link_to "sign up", new_user_registration_path, class: "d-flex justify-content-center w-100 m-auto btn-sm mt-4 mb-2 btn btn-success" %>
-        </span>
-      </div>
-      <div>
-        <p>
-          Already have an account?
-        </p>
-        <span>
-          <%= link_to "sign in", new_user_session_path, class: "d-flex justify-content-center w-100 m-auto btn-sm mt-4 mb-2 btn btn-primary" %>
-        </span>
-      </div>
-    </div>
+    <span>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 mb-1 btn btn-light bg-transparent border-0" %>
+    </span>
   </div>
 </section>

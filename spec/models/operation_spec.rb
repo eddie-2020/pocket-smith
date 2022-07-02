@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Operation, type: :model do
   before :example do
-    @user = FactoryBot.create(:user, :confirmed)
+    @user = FactoryBot.create(:user)
     @operation = Operation.create(name: 'Operation 1', amount: 50, author_id: @user.id)
   end
 

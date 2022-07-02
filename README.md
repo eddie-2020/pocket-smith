@@ -7,6 +7,9 @@ This is a mobile web application where you can manage your budget whereby you ha
 ## Home Page View
 ![](./app/assets/screenshots/CaptureI.PNG)
 
+## Test Cases
+![](./app/assets/screenshots/CaptureII.PNG)
+
 ## Clone Project
 - STEP 1:
   - git clone `git@github.com:oluyaratosin123/Pocket-Smith.git`

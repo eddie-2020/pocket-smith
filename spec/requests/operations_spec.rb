@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Operations', type: :request do
   before :example do
-    @user = FactoryBot.create(:user, :confirmed)
+    @user = FactoryBot.create(:user)
     @group = FactoryBot.create(:group, author_id: @user.id)
     sign_in @user
   end
@@ -35,7 +35,7 @@ RSpec.describe 'Operations', type: :request do
     end
 
     it 'should have boilerplate text content' do
-      expect(response.body).to include('Create Operation')
+      expect(response.body).to include('Add Operations')
     end
 
     it 'should return http success' do

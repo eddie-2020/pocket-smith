@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :example do
-    @user = FactoryBot.create(:user, :confirmed)
+    @user = FactoryBot.create(:user)
   end
 
   it 'should be valid with valid attributes' do

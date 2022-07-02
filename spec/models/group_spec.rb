@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   before :example do
-    @user = FactoryBot.create(:user, :confirmed)
-    @group = Group.create(name: 'Group 1', icon: 'www.a_link_for_an_icon.png', author_id: @user.id)
+    @user = FactoryBot.create(:user)
+    @group = Group.create(name: 'Personal', icon: 'https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif',
+                          author_id: @user.id)
   end
 
   it 'should be valid with valid attributes' do

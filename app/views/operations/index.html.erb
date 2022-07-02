@@ -1,7 +1,7 @@
 <header class="bg-primary p-2 d-flex justify-content-around align-items-center">
   <div>
     <%= link_to groups_path do %>
-      <i class="bi bi-caret-left-fill m-2 fs-4 bg-light rounded p-2 text-dark"></i>
+      <i class="bi bi-caret-left-fill m-1 text-light fs-4 icon"></i>
     <% end %>  </div>
   <div>
     <h1 class="text-center fs-2 text-light"> Operations for <%= @group.name %> </h1>
@@ -30,7 +30,9 @@
       </div>
     <% end %>
   <% end %>
-  <div class="margin">
-    <%= link_to "Add operation", new_operation_path, class: "fixed-bottom d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 btn btn-success" %>
+  <div class="add-group-container p-3 fixed-bottom">
+    <div class="border">
+      <%= link_to "ADD OPERATION", new_operation_path, class: "add-group-btn fs-4" %>
+    </div>
   </div>
 </section>

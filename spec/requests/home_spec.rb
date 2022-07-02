@@ -11,7 +11,7 @@ RSpec.describe 'Homes', type: :request do
     end
 
     it 'should have boilerplate text content' do
-      expect(response.body).to include('Fast Budget')
+      expect(response.body).to include('Pocket Smith')
     end
 
     it 'should return http success' do

@@ -3,7 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Groups index page', type: :system do
   before :example do
     driven_by(:rack_test)
+<<<<<<< HEAD
     @user = FactoryBot.create(:user)
+=======
+    @user = FactoryBot.create(:user, :confirmed)
+>>>>>>> 72923e70d1067fa1721fdcfadd6bce61b61fe9ca
     @group = FactoryBot.create(:group, author_id: @user.id)
     sign_in @user
     visit groups_path

@@ -1,0 +1,38 @@
+<header class="bg-primary p-2 d-flex justify-content-around align-items-center">
+  <div>
+    <%= link_to groups_path do %>
+      <i class="bi bi-caret-left-fill m-1 text-light fs-4 icon"></i>
+    <% end %>  </div>
+  <div>
+    <h1 class="text-center fs-2 text-light"> Operations for <%= @group.name %> </h1>
+  </div>
+  <div>
+    <li class="nav-item">
+      <%= link_to "Sign Out", destroy_user_session_path, method: :get, class: 'nav-link btn btn-danger text-white' %>
+    </li>
+</header>
+
+<div class="bg-secondary text-light">
+  <p  class="text-center p-2">Money spent: $<%= group_amount(@group) %></p>
+</div>
+
+<section class="container">
+
+  <% if @operations.empty? %>
+    <div class="mt-5">
+      <h3 class="text-center">No operations yet.</h3>
+    </div>
+  <% else %>
+    <% @operations.each do |operation| %>
+      <div class="p-4 border border-1 shadow-sm m-4 d-flex justify-content-between">
+        <h3 class="m-2"><%= operation.name %></h3>
+        <p class="m-2 fs-4 fw-bolder text-secondary">$<%= operation.amount %></p>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="add-group-container p-3 fixed-bottom">
+    <div class="border">
+      <%= link_to "ADD OPERATION", new_operation_path, class: "add-group-btn fs-4" %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<header class="bg-primary p-2">
+  <h1 class="position-absolute">
+    <%= link_to root_path do %>
+      <i class="bi bi-caret-left-fill m-1 fs-4 text-light"></i>
+    <% end %>
+  </h1>
+  <h1 class="text-center text-light"> LOG IN </h1>
+</header>
+
+<div class="container mt-5">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field form-group mt-2">
+      <%= f.label :email, class: "form-label fs-5" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+
+    <div class="field form-group mt-2">
+      <%= f.label :password, class: "form-label fs-5" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field form-group checkbox">
+        <%= f.check_box :remember_me, class: "check" %>
+        <%= f.label :remember_me, class: "form-label fs-5" %>
+      </div>
+    <% end %>
+
+    <div class="actions form-group">
+      <%= f.submit "Log in", class: "d-flex justify-content-center w-100 m-auto btn-sm mt-4 mb-2 btn btn-primary" %>
+    </div>
+  <% end %>
+
+
+<%= render "devise/shared/links" %>
+</div>

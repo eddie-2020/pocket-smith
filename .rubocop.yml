@@ -2,7 +2,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - "db/**/*"
-    - "bin/*" 
+    - "bin/*"
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
@@ -45,12 +45,12 @@ Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
-Layout/EndOfLine:
-  Enabled: false
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
 Lint/RaiseException:
+  Enabled: false
+Layout/EndOfLine:
   Enabled: false
 Lint/StructNewOverride:
   Enabled: false

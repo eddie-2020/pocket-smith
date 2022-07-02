@@ -1,0 +1,50 @@
+<header class="bg-primary p-2 d-flex justify-content-around align-items-center">
+  <div>
+    <i class="bi bi-list fs-1 text-light cursor"></i>
+  </div>
+  <div>
+    <h1 class="text-center text-light"> GROUPS </h1>
+  </div>
+  <div>
+    <i class="bi bi-search fs-1 text-light cursor"></i>
+  </div>
+</header>
+
+<section class="container mt-3">
+  <% if @groups.empty? %>
+    <div class="padding border">
+      <h3 class="text-center mt-5">No groups yet.</h3>
+    </div>
+  <% else %>
+  <% @groups.each do |group| %>
+    <div class="d-flex border border-1 p-4 shadow-sm align-items-center mt-3 me-auto group_card">
+      <div>
+        <img src=<%= group.icon %> alt=<%= group.name %> class="img-thumbnail ">
+      </div>
+      <div class="m-3">
+        <h3 class="fs-5"><%= group.author.name %></h3>
+        <div>
+          <h3 class="link fs-4"><%= link_to group.name, group_operations_path(group_id: group.id) %></h3>
+        </div>
+        <p>
+          <%= group.created_at.strftime("%d %b %Y") %>
+        </p>
+      </div>
+
+      <div class="price">
+        <p class="fs-4 fw-bolder text-secondary">$<%= group_amount(group) %></p>
+      </div>      
+    </div>
+  <% end %>
+  <% end %>
+  <div>
+    <li class="nav-item mt-2">
+      <%= link_to "Sign Out", destroy_user_session_path, method: :get, class: 'nav-link btn btn-danger text-white' %>
+    </li>
+  </div>
+  <div class="add-group-container p-3 fixed-bottom">
+    <div class="border">
+      <%= link_to "ADD GROUP", new_group_path, class: "add-group-btn fs-4" %>
+    </div>
+  </div>
+</section>

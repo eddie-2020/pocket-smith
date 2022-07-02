@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Blaka&family=Lobster&family=Poppins:wght@200&family=Roboto:wght@300;700&family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+  --light-background: #efefef;
+  --font: 'Signika Negative', sans-serif;
+  --font2: 'Lobster', cursive;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--light-background);
+}
+
+.splash-title {
+  font-family: var(--font2);
+  margin-top: 30vh;
+  font-size: 60px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.price {
+  margin-left: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.add-group-container {
+  align-self: center;
+  padding: 1%;
+  background-color: #5fb523;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.border {
+  padding: 1rem;
+}
+
+.add-group-btn {
+  color: #ffff;
+  background-color: #5fb523;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .link {
+    margin-right: 100px;
+  }
+
+  a {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .splash-title {
+    font-family: var(--font2);
+    margin-top: 30vh;
+    font-size: 40px;
+  }
+}

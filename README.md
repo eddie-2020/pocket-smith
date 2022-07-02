@@ -1,6 +1,15 @@
 # Pocket-Smith
 This is a mobile web application where you can manage your budget whereby you have a list of transactions associated with a category, so that users can see how much money they spent and on what they spent their money on.
 
+## Live Demo
+[Pocket Smith](https://pocket-smith.herokuapp.com/)
+
+### Live Presentation
+[Pocket Smith App video](https://www.loom.com/share/911d132b31c64383b8fcd39512b839b5)
+
+## Test Cases
+![](./app/assets/screenshots/CaptureII.PNG)
+
 ## Clone Project
 - STEP 1:
   - git clone `git@github.com:oluyaratosin123/Pocket-Smith.git`
@@ -37,9 +46,7 @@ Contributions, issues, and feature requests are welcome!
 Give a :star: if you like this project.
 
 ## Acknowledgments
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). Under the [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## License :memo:
 This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed

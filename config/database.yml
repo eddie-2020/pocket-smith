@@ -13,15 +13,12 @@ development:
 
   password: root
 
-  #host: localhost
-
-  #port: 5432
-
 test:
   <<: *default
   database: pocket_smith_development
   username: pocket_smith
   host: localhost
+  password: root
 
 production:
   <<: *default
